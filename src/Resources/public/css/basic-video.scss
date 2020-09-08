@@ -1,0 +1,21 @@
+
+// just for testing, ratios missing, vimeo missing, responsive rules missing etc.
+.ce_youtube {
+	.video-container {
+		position: relative;
+	}
+	.youtube-video-block {
+		position: relative;
+		height: 0;
+		padding-bottom: 56.25%;
+		iframe, picture {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}	
+	}	
+}
+
+
