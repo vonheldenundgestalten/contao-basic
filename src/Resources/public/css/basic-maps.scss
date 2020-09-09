@@ -1,14 +1,21 @@
+.ce_dlh_googlemaps, 
+.mod_dlh_googlemaps,
+.ce_openstreetmap {
+    position: relative; 
+    height: 0;
+    width: 100%;
+    padding-bottom: 50%;
+    @media screen and (max-width: 520px) {
+        padding-bottom: 0;
+        height: auto;
+    }
 
-// just for testing, module and openstreetmap missing, responsive rules missing etc.
-.ce_dlh_googlemaps {
-	position: relative;
-	height: 0;
-	padding-bottom: 50%;
-	.dlh_googlemap {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-	}
+    .dlh_googlemap,
+	.open-street-map-block {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
 }
