@@ -10,9 +10,14 @@ body.privacy {
 	}
 	// needs to be treated visibly different, for legal reasons - bold or uppercase are the recommendations
 	.dsgvo21 {
-		.textcontainer {
+		> .innerbox > .textcontainer,
+		> .inside {
 			padding: 2em;
 			background: #eee;
+		}
+
+		> p {
+			text-transform: uppercase;
 		}
 	}
 }
