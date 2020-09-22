@@ -2,10 +2,31 @@
 .ce_vimeo {
 	.video_container {
 		position: relative;
-
-		> iframe {
-			border: 5px solid red;
+       
+		> iframe,
+        .ratio-none {
+			border: 8px solid red;
 		}
+
+        .ratio-none {
+            position: relative;
+            display: block;
+            padding-bottom: 40%;
+            &:before {
+                content: "Please set aspect ratio";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 30;
+                background: red;
+                color: #fff;
+                display: block;
+                height: 2em;
+                line-height: 2em;
+                padding: 0 1em;
+            }
+        }
 
         .ratio-169 {
             padding-bottom: 56.25%;
@@ -37,7 +58,18 @@
         .ratio-11 {
             padding-bottom: 100%;
         }
-	}	
+	}
+    .privacy-vimeo-question-block,
+    .privacy-youtube-question-block {
+        height: 0;
+    }
+    @media screen and (max-width: 520px) {
+        .privacy-vimeo-question-block,
+        .privacy-youtube-question-block {
+            padding-bottom: 0;
+            height: auto;
+        }
+    }
 }
 
 .responsive,
@@ -45,7 +77,6 @@
 .vimeo-video-block {
     position: relative;
     height: 0;
-
     iframe, picture {
 		width: 100%;
 		height: 100%;
@@ -59,5 +90,3 @@ video {
 	max-width: 100%;
     height: auto;
 }
-
-
