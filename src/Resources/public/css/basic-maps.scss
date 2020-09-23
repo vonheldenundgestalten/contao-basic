@@ -5,10 +5,7 @@
     height: 0;
     width: 100%;
     padding-bottom: 50%;
-    @media screen and (max-width: 520px) {
-        padding-bottom: 80%;
-    }
-
+    
     .dlh_googlemap,
 	.open-street-map-block {
         position: absolute;
@@ -17,4 +14,11 @@
         width: 100%;
         height: 100%;
     }
+    @media screen and (max-width: 520px) {
+        padding-bottom: 80%;
+    }
+}
+
+.map-container {
+    position: relative;
 }
