@@ -34,9 +34,11 @@
         .ratio-1610 {
         	padding-bottom: 62.5%;
         }
-        .ratio-2351,
-        .ratio-219 {
+        .ratio-2351 {
             padding-bottom: 42.55%;
+        }
+        .ratio-219 {
+            padding-bottom: 42.85%;
         }
         .ratio-2391,
         .ratio-dcp2k {
@@ -72,11 +74,13 @@
     }
 }
 
-.responsive,
-.youtube-video-block, 
-.vimeo-video-block {
-    position: relative;
-    height: 0;
+.video_container {
+    .responsive,
+    .youtube-video-block, 
+    .vimeo-video-block {
+        position: relative;
+        height: 0;
+    }
     iframe, picture {
 		width: 100%;
 		height: 100%;
