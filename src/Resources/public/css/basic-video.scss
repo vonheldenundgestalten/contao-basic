@@ -63,13 +63,22 @@
 	}
     .privacy-vimeo-question-block,
     .privacy-youtube-question-block {
-        height: 0;
-    }
-    @media screen and (max-width: 520px) {
-        .privacy-vimeo-question-block,
-        .privacy-youtube-question-block {
-            padding-bottom: 0;
+        @media screen and (max-width: 520px) {
             height: auto;
+            &.ratio-169,
+            &.ratio-1610,
+            &.ratio-2351,
+            &.ratio-219,
+            &.ratio-2391,
+            &.ratio-dcp2k,
+            &.ratio-1851,
+            &.ratio-1331,
+            &.ratio-43,
+            &.ratio-21,
+            &.ratio-32,
+            &.ratio-11 {
+                padding: 0;
+            }
         }
     }
 }
