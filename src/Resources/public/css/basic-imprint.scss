@@ -2,11 +2,14 @@
 // basic styling taken over from magmell-hosting to get us started
 body.privacy {
 	counter-reset: section;
-	h2 {
-		counter-increment: section;
-	}
-	h2:before {
-		content: counter(section) ". ";
+
+	#container {
+		h2 {
+			counter-increment: section;
+			&:before {
+				content: counter(section) ". ";
+			}
+		}
 	}
 	// needs to be treated visibly different, for legal reasons - bold or uppercase are the recommendations
 	.dsgvo21 {
