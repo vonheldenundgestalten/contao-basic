@@ -14,7 +14,8 @@ body.privacy {
 	// needs to be treated visibly different, for legal reasons - bold or uppercase are the recommendations
 	.dsgvo21 {
 		> .innerbox > .textcontainer,
-		> .inside {
+		> .inside,
+		> .txt_container {
 			padding: 2em;
 			background: #eee;
 			p:last-child {
