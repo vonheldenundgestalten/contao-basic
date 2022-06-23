@@ -17,6 +17,9 @@
     "require": {
         "contao/core-bundle": "4.9.*"
     },
+    "replace": {
+        "magmell-agentur/contao-basic"
+    },
     "require-dev": {
         "contao/manager-plugin": "^2.3"
     },
@@ -36,5 +39,8 @@
             "src/Resources/contao/languages/",
             "src/Resources/contao/templates/"
         ]
+    },
+    "suggest": {
+        "vonheldenundgestalten/contao-privacy": "Simple privacy handling for a small selection of typical services without external dependencies"
     }
 }
