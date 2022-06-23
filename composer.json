@@ -1,11 +1,11 @@
 {
-    "name": "magmell-agentur/contao-basic",
-    "description": "Basic stylings for all Magmell projects (for Contao 4.x)",
+    "name": "vonheldenundgestalten/contao-basic",
+    "description": "Basic stylings for all VHUG projects (for Contao 4.x)",
     "type": "contao-bundle",
     "authors": [
         {
             "name": "Markus Milkereit",
-            "email": "markus.milkereit@magmell.de",
+            "email": "mm@vonheldenundgestalten.de",
             "role": "Developer"
         },
         {
