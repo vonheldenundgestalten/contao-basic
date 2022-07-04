@@ -16,7 +16,7 @@
         }
     ],
     "require": {
-        "contao/core-bundle": "4.9.*"
+        "contao/core-bundle": "^4.9"
     },
     "replace": {
         "magmell-agentur/contao-basic": "@dev"
