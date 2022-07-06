@@ -1,3 +1,7 @@
+.map-container {
+    position: relative;
+}
+
 .ce_dlh_googlemaps, 
 .mod_dlh_googlemaps,
 .ce_openstreetmap,
@@ -38,6 +42,6 @@
     }
 }
 
-.map-container {
-    position: relative;
+.no-cookie-maps {
+    background: #eee;
 }
