@@ -1,12 +1,14 @@
 .ce_dlh_googlemaps, 
 .mod_dlh_googlemaps,
-.ce_openstreetmap {
+.ce_openstreetmap,
+.no-cookie-maps {
     position: relative; 
     height: 0;
     width: 100%;
     padding-bottom: 50%;
     
-    .dlh_googlemap {
+    .dlh_googlemap,
+    .no-cookie-map {
         position: absolute;
         top: 0;
         left: 0;
