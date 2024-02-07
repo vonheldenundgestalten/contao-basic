@@ -1,6 +1,6 @@
 {
     "name": "vonheldenundgestalten/contao-basic",
-    "description": "Basic stylings for all VHUG projects (for Contao 4.x)",
+    "description": "Basic stylings for all VHUG projects (for Contao 5.3.x)",
     "type": "contao-bundle",
     "license": "MIT",
     "authors": [
@@ -16,7 +16,8 @@
         }
     ],
     "require": {
-        "contao/core-bundle": "^4.9"
+        "contao/core-bundle": "^5.3",
+        "vonheldenundgestalten/contao-basic": "@dev"
     },
     "replace": {
         "magmell-agentur/contao-basic": "@dev"
@@ -43,5 +44,10 @@
     },
     "suggest": {
         "vonheldenundgestalten/contao-privacy": "Simple privacy handling for a small selection of typical services without external dependencies"
-    }
+    },
+    "repositories": [
+    	{
+		"type": "path",
+            	"url": "private-bundles/vonheldenundgestalten/contao-basic"
+        }]
 }
