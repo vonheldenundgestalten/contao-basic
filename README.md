@@ -1,5 +1,5 @@
 # contao-basic
-Basic stylings and logic for every client project (Contao 4.9+)
+Basic stylings and logic for every client project (Contao 5.3+)
 
 ## contents
 * setting basic video parameters in DCA, aspect ratio set to 16:9 if nothing else was selected
