@@ -17,7 +17,6 @@
     ],
     "require": {
         "contao/core-bundle": "^5.3",
-        "vonheldenundgestalten/contao-basic": "@dev"
     },
     "replace": {
         "magmell-agentur/contao-basic": "@dev"
