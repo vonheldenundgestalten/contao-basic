@@ -1,0 +1,3 @@
+parameters:
+    vhug_contao_basic.include_reset_css: true
+    vhug_contao_basic.include_basic_styles: true

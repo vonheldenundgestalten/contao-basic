@@ -1,43 +1,47 @@
 <?php
 
-namespace Magmell\Contao\Basic\Hooks;
+namespace VHUG\ContaoBasic\EventListener;
 
 use Contao\PageModel;
 use Contao\LayoutModel;
-use Contao\PageRegular;
 
-class AddStyles
+class AddStylesListener
 {
-    /**
-     * @param PageModel $pageModel
-     * @param LayoutModel $layout
-     * @param PageRegular $pageRegular
-     */
-    public function generatePage(PageModel $pageModel, LayoutModel $layout, PageRegular $pageRegular)
+	public function __construct(
+        private bool $includeResetCss,
+        private bool $includeBasicStyles
+    ) {}
+	
+	public function __invoke(PageModel $page, LayoutModel $layout): void
     {
 		if (!isset($GLOBALS['TL_CSS']) || !is_array($GLOBALS['TL_CSS']))
 		{
 			$GLOBALS['TL_CSS'] = array();
 		}
-
-		array_unshift(
-			$GLOBALS['TL_CSS'],
-			"bundles/contaobasic/css/reset.scss|static",
-			"bundles/contaobasic/css/basic-video.scss|static",
-			"bundles/contaobasic/css/basic-maps.scss|static"
-		);
-
-		$this->includeImprintCss();
+				
+        if ($this->includeBasicStyles) {
+			array_unshift(
+				$GLOBALS['TL_CSS'],
+				"bundles/contaobasic/css/basic-video.scss|static",
+				"bundles/contaobasic/css/basic-maps.scss|static"
+			);
+            
+			$this->includeImprintCss($page);
+        }
+		
+		if ($this->includeResetCss) {
+			array_unshift(
+				$GLOBALS['TL_CSS'],
+				"bundles/contaobasic/css/reset.scss|static",
+			);
+        }       
     }
 
     /**
      * Include styles on 'data protection' and 'imprint' pages
      */
-    protected function includeImprintCss()
+    protected function includeImprintCss(PageModel $objPage)
     {
-        /** @var PageModel $objPage*/
-        global $objPage;
-
         $arrAlias = explode('/', $objPage->alias);
         $strAliasLastFragment = $arrAlias[count($arrAlias) - 1];
 

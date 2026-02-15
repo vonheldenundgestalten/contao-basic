@@ -1,13 +1,13 @@
 <?php
 
-namespace Magmell\Contao\Basic\ContaoManager;
+namespace VHUG\ContaoBasic\ContaoManager;
 
 use Contao\CoreBundle\ContaoCoreBundle;
 use Contao\NewsBundle\ContaoNewsBundle;
 use Contao\ManagerPlugin\Bundle\BundlePluginInterface;
 use Contao\ManagerPlugin\Bundle\Config\BundleConfig;
 use Contao\ManagerPlugin\Bundle\Parser\ParserInterface;
-use Magmell\Contao\Basic\ContaoBasicBundle;
+use VHUG\ContaoBasic\ContaoBasicBundle;
 
 class Plugin implements BundlePluginInterface
 {

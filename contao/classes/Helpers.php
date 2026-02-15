@@ -1,6 +1,6 @@
 <?php
 
-namespace Magmell\Contao\Basic;
+namespace VHUG\ContaoBasic;
 
 use Contao\System;
 use Symfony\Component\HttpFoundation\Request;

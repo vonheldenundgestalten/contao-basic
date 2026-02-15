@@ -1,10 +1,10 @@
 <?php
-namespace Magmell\Contao\Basic;
+namespace VHUG\ContaoBasic;
 
 use Contao\System;
 use Symfony\Component\HttpFoundation\Request;
 
-class VHUGUtil {
+class AssetUtil {
     public static function include_css(String $path) {
         $GLOBALS['TL_CSS'][] = $path;
 

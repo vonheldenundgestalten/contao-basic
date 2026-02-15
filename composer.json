@@ -25,28 +25,20 @@
         "contao/manager-plugin": "^2.3"
     },
     "extra": {
-        "contao-manager-plugin": "Magmell\\Contao\\Basic\\ContaoManager\\Plugin"
+        "contao-manager-plugin": "VHUG\\ContaoBasic\\ContaoManager\\Plugin"
     },
     "autoload": {
         "psr-4": {
-            "Magmell\\Contao\\Basic\\": "src"
+            "VHUG\\ContaoBasic\\": "src"
         },
         "classmap": [
-            "src/Resources/contao/"
+            "contao/"
         ],
-        "exclude-from-classmap": [
-            "src/Resources/contao/config/",
-            "src/Resources/contao/dca/",
-            "src/Resources/contao/languages/",
-            "src/Resources/contao/templates/"
+        "files": [
+            "src/aliases.php"
         ]
     },
     "suggest": {
         "vonheldenundgestalten/contao-privacy": "Simple privacy handling for a small selection of typical services without external dependencies"
-    },
-    "repositories": [
-    	{
-		"type": "path",
-            	"url": "private-bundles/vonheldenundgestalten/contao-basic"
-        }]
+    }
 }
