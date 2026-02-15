@@ -1,0 +1,7 @@
+.as-grid .tl_content .inside {
+  display: block;
+}
+
+.as-grid .tl_content > .inside {
+  display: grid;
+}

@@ -1,0 +1,12 @@
+
+body {
+    // border: 2px solid #ff1100;
+}
+// overwrite that stupid "everything is a grid" setting for tl_content
+.as-grid .tl_content .inside {
+    display: block;
+}
+// mode specific definition to keep what they wanted to achieve
+.as-grid .tl_content > .inside {
+    display: grid;
+}

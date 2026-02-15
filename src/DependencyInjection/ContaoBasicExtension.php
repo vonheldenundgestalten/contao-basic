@@ -14,7 +14,12 @@ class ContaoBasicExtension extends Extension
     {
         // Load services
         $loader = new YamlFileLoader($container, new FileLocator(__DIR__.'/../../config'));
-        $loader->load('config.yaml');
-		$loader->load('services.yaml');
+     	$loader->load('parameters.yaml');
+     	$loader->load('services.yaml');
+    }
+
+    public function registerContainerConfiguration(LoaderInterface $loader, array $managerConfig): void
+    {
+        $loader->load('@ContaoBasic/config/config.yaml');
     }
 }
