@@ -1,50 +1,31 @@
-#header,
-body.be #header {
-    background: #fa0064 !important;
+#header {
+    background: #fa0064;
 }
 
-#header h1 a,
-#header .header-logo a,
-#header .logo a,
-#header .tl_logo a {
-    display: inline-flex !important;
-    align-items: center !important;
-    min-width: 92px !important;
-    min-height: 32px !important;
-    padding-left: 38px !important;
-    margin-right: 12px !important;
+#header h1 a {
+    display: inline-flex;
+    align-items: center;
+    min-width: 92px;
+    padding-left: 38px;
+    margin-right: 12px;
     overflow: hidden;
-    color: transparent !important;
-    text-indent: 0 !important;
-    text-shadow: none !important;
-    background-image: url("../img/vhug-helmet.svg") !important;
-    background-repeat: no-repeat !important;
-    background-position: left center !important;
-    background-size: 30px 30px !important;
+    color: transparent;
+    text-indent: 0;
+    text-shadow: none;
+    background: url("../img/vhug-helmet.svg") no-repeat left center;
+    background-size: 30px 30px;
 }
 
-#header h1 a .app-title,
-#header .header-logo a .app-title,
-#header .logo a .app-title,
-#header .tl_logo a .app-title {
-    display: none !important;
+#header h1 a .app-title {
+    display: none;
 }
 
 #header h1 a img,
-#header h1 a svg,
-#header .header-logo a img,
-#header .header-logo a svg,
-#header .logo a img,
-#header .logo a svg,
-#header .tl_logo a img,
-#header .tl_logo a svg {
-    opacity: 0 !important;
+#header h1 a svg {
+    opacity: 0;
 }
 
-#header h1 a::after,
-#header .header-logo a::after,
-#header .logo a::after,
-#header .tl_logo a::after {
+#header h1 a::after {
     content: "DEV";
     display: inline-flex;
     align-items: center;
