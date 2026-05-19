@@ -1,4 +1,4 @@
-#header {
+#header:has(h1) {
     background: #fa0064;
 }
 
@@ -6,22 +6,53 @@
     display: inline-flex;
     align-items: center;
     min-width: 92px;
-    padding-left: 48px;
+    padding-left: 10px;
     margin-right: 12px;
     overflow: hidden;
     color: transparent;
     text-indent: 0;
     text-shadow: none;
-    background: url("../img/vhug-helmet.svg") no-repeat 10px center;
-    background-size: 30px 30px;
+    background: none;
 }
 
-#header h1 a .app-title {
+#header h1 a::before,
+#header .inner > #home::before {
+    content: "";
+    flex: 0 0 30px;
+    width: 30px;
+    height: 30px;
+    margin-right: 8px;
+    background: #fa0064;
+    -webkit-mask: url("../img/vhug-helmet.svg") no-repeat center / contain;
+    mask: url("../img/vhug-helmet.svg") no-repeat center / contain;
+}
+
+#header h1 a::before {
+    background: #fff;
+}
+
+#header .inner > #home {
+    display: inline-flex;
+    align-items: center;
+    min-width: 92px;
+    padding-left: 10px;
+    margin-right: 12px;
+    overflow: hidden;
+    color: transparent;
+    text-indent: 0;
+    text-shadow: none;
+    background: none;
+}
+
+#header h1 a .app-title,
+#header .inner > #home .app-title {
     display: none;
 }
 
 #header h1 a img,
-#header h1 a svg {
+#header h1 a svg,
+#header .inner > #home img,
+#header .inner > #home svg {
     opacity: 0;
 }
 
@@ -38,6 +69,24 @@
     border-radius: 999px;
     color: #fa0064;
     background: #fff;
+    font: 700 13px/1 Arial, sans-serif;
+    letter-spacing: 0;
+    pointer-events: none;
+    vertical-align: middle;
+}
+
+#header .inner > #home::after {
+    content: "VHUG DEV";
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 40px;
+    height: 24px;
+    padding: 0 10px;
+    border: 2px solid #fa0064;
+    border-radius: 999px;
+    color: #fff;
+    background: #fa0064;
     font: 700 13px/1 Arial, sans-serif;
     letter-spacing: 0;
     pointer-events: none;
