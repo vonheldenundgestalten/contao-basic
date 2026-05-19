@@ -3,7 +3,6 @@
 namespace VHUG\ContaoBasic\EventListener;
 
 use Contao\CoreBundle\Routing\ScopeMatcher;
-use Symfony\Component\EventDispatcher\Attribute\AsEventListener;
 use Symfony\Component\HttpKernel\Event\RequestEvent;
 
 class AddBackendAssetsListener
@@ -14,12 +13,44 @@ class AddBackendAssetsListener
 
     public function __invoke(RequestEvent $event): void
     {
-        // only add when scope = backend
         if (!$this->scopeMatcher->isBackendMainRequest($event)) {
             return;
         }
 
         $GLOBALS['TL_CSS'][] = 'bundles/contaobasic/css/backend.css';
-        // $GLOBALS['TL_JAVASCRIPT'][] = /* add your JS asset here */;
+
+        if (!$this->shouldAddDevMarker($event)) {
+            return;
+        }
+
+        $GLOBALS['TL_CSS'][] = 'bundles/contaobasic/css/dev-backend-marker.css|static';
+    }
+
+    private function shouldAddDevMarker(RequestEvent $event): bool
+    {
+        $override = $this->getEnvValue('VHUG_DEV_BACKEND_MARKER');
+
+        if ($override === 'off') {
+            return false;
+        }
+
+        if ($override === 'on') {
+            return true;
+        }
+
+        $host = strtolower($event->getRequest()->getHost());
+
+        return $host === 'abnahme-server.de' || substr($host, -strlen('.abnahme-server.de')) === '.abnahme-server.de';
+    }
+
+    private function getEnvValue(string $name): ?string
+    {
+        $value = $_SERVER[$name] ?? $_ENV[$name] ?? getenv($name);
+
+        if (!is_string($value) || $value === '') {
+            return null;
+        }
+
+        return strtolower(trim($value));
     }
 }

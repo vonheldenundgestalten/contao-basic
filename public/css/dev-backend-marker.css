@@ -1,0 +1,64 @@
+#header,
+body.be #header {
+    background: #fa0064 !important;
+}
+
+#header h1 a,
+#header .header-logo a,
+#header .logo a,
+#header .tl_logo a {
+    display: inline-flex !important;
+    align-items: center !important;
+    min-width: 92px !important;
+    min-height: 32px !important;
+    padding-left: 38px !important;
+    margin-right: 12px !important;
+    overflow: hidden;
+    color: transparent !important;
+    text-indent: 0 !important;
+    text-shadow: none !important;
+    background-image: url("../img/vhug-helmet.svg") !important;
+    background-repeat: no-repeat !important;
+    background-position: left center !important;
+    background-size: 30px 30px !important;
+}
+
+#header h1 a .app-title,
+#header .header-logo a .app-title,
+#header .logo a .app-title,
+#header .tl_logo a .app-title {
+    display: none !important;
+}
+
+#header h1 a img,
+#header h1 a svg,
+#header .header-logo a img,
+#header .header-logo a svg,
+#header .logo a img,
+#header .logo a svg,
+#header .tl_logo a img,
+#header .tl_logo a svg {
+    opacity: 0 !important;
+}
+
+#header h1 a::after,
+#header .header-logo a::after,
+#header .logo a::after,
+#header .tl_logo a::after {
+    content: "DEV";
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 40px;
+    height: 24px;
+    padding: 0 10px;
+    margin-left: 8px;
+    border: 2px solid #fff;
+    border-radius: 999px;
+    color: #fa0064;
+    background: #fff;
+    font: 700 13px/1 Arial, sans-serif;
+    letter-spacing: 0;
+    pointer-events: none;
+    vertical-align: middle;
+}
